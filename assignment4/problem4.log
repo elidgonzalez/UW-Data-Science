@@ -1,0 +1,225 @@
+78   [main] INFO  org.apache.pig.Main  - Apache Pig version 0.17.0 (r: unknown) compiled Dec 14 2019, 01:17:59
+79   [main] INFO  org.apache.pig.Main  - Logging error messages to: /mnt/var/log/pig/pig_1586544499506.log
+1119 [main] INFO  org.apache.pig.impl.util.Utils  - Default bootup file /home/hadoop/.pigbootup not found
+1296 [main] INFO  org.apache.pig.backend.hadoop.executionengine.HExecutionEngine  - Connecting to hadoop file system at: hdfs://ip-172-31-35-164.us-west-2.compute.internal:8020
+2017 [main] INFO  org.apache.pig.PigServer  - Pig Script ID for the session: PIG-problem4.pig-a99e5734-c135-46f8-b4e5-6e37fabc392f
+2843 [main] INFO  org.apache.pig.backend.hadoop.PigATSClient  - Created ATS Hook
+8405 [main] INFO  org.apache.pig.tools.pigstats.ScriptState  - Pig features used in the script: GROUP_BY,ORDER_BY
+8455 [main] INFO  org.apache.pig.data.SchemaTupleBackend  - Key [pig.schematuple] was not set... will not generate code.
+8499 [main] INFO  org.apache.pig.newplan.logical.optimizer.LogicalPlanOptimizer  - {RULES_ENABLED=[AddForEach, ColumnMapKeyPrune, ConstantCalculator, GroupByConstParallelSetter, LimitOptimizer, LoadTypeCastInserter, MergeFilter, MergeForEach, NestedLimitOptimizer, PartitionFilterOptimizer, PredicatePushdownOptimizer, PushDownForEachFlatten, PushUpFilter, SplitFilter, StreamTypeCastInserter]}
+8563 [main] INFO  org.apache.pig.impl.util.SpillableMemoryManager  - Selected heap (PS Old Gen) of size 699400192 to monitor. collectionUsageThreshold = 489580128, usageThreshold = 489580128
+8664 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezLauncher  - Tez staging directory is /tmp/temp-1962705793 and resources directory is /tmp/temp-1962705793
+8699 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.plan.TezCompiler  - File concatenation threshold: 100 optimistic? false
+8759 [main] INFO  org.apache.pig.backend.hadoop.executionengine.util.CombinerOptimizerUtil  - Choosing to move algebraic foreach to combiner
+8770 [main] INFO  org.apache.pig.backend.hadoop.executionengine.util.CombinerOptimizerUtil  - Choosing to move algebraic foreach to combiner
+8785 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.plan.optimizer.SecondaryKeyOptimizerTez  - Using Secondary Key Optimization in the edge between vertex - scope-41 and vertex - scope-50
+8883 [main] INFO  org.apache.pig.builtin.TextLoader  - Using PigTextInputFormat
+9176 [main] INFO  org.apache.pig.backend.hadoop.executionengine.util.MapRedUtil  - Total input paths to process : 251
+9331 [main] INFO  org.apache.pig.backend.hadoop.executionengine.util.MapRedUtil  - Total input paths (combined) to process : 7908
+10157 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.plan.optimizer.ParallelismSetter  - Increased requested parallelism of scope-40 to 100
+11046 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJobCompiler  - Local resource: joda-time-2.9.4.jar
+11046 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJobCompiler  - Local resource: pig-0.17.0-core-h2.jar
+11046 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJobCompiler  - Local resource: myudfs.jar
+11050 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJobCompiler  - Local resource: antlr-runtime-3.4.jar
+11051 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJobCompiler  - Local resource: automaton-1.11-8.jar
+11721 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder  - For vertex - scope-39: parallelism=7908, memory=1536, java opts=-Djava.net.preferIPv4Stack=true -Dhadoop.metrics.log.level=WARN -Xmx1229m -Dlog4j.configuratorClass=org.apache.tez.common.TezLog4jConfigurator -Dlog4j.configuration=tez-container-log4j.properties -Dyarn.app.container.log.dir=<LOG_DIR> -Dtez.root.logger=INFO,CLA 
+11736 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder  - Processing aliases: count_by_subject,ntriples,raw,subjects
+11736 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder  - Detailed locations: raw[6,6],ntriples[-1,-1],ntriples[-1,-1],count_by_subject[17,19],subjects[12,11]
+11736 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder  - Pig features in the vertex: 
+12398 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder  - For vertex - scope-40: parallelism=100, memory=3072, java opts=-Djava.net.preferIPv4Stack=true -Dhadoop.metrics.log.level=WARN -Xmx2458m -Dlog4j.configuratorClass=org.apache.tez.common.TezLog4jConfigurator -Dlog4j.configuration=tez-container-log4j.properties -Dyarn.app.container.log.dir=<LOG_DIR> -Dtez.root.logger=INFO,CLA 
+12398 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder  - Processing aliases: count_by_subject,count_subj,group_subj
+12398 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder  - Detailed locations: count_by_subject[17,19],count_subj[23,13],group_subj[20,13]
+12399 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder  - Pig features in the vertex: GROUP_BY
+12626 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder  - Set auto parallelism for vertex scope-41
+12627 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder  - For vertex - scope-41: parallelism=49, memory=3072, java opts=-Djava.net.preferIPv4Stack=true -Dhadoop.metrics.log.level=WARN -Xmx2458m -Dlog4j.configuratorClass=org.apache.tez.common.TezLog4jConfigurator -Dlog4j.configuration=tez-container-log4j.properties -Dyarn.app.container.log.dir=<LOG_DIR> -Dtez.root.logger=INFO,CLA 
+12628 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder  - Processing aliases: count_by_subject_ordered,count_subj
+12629 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder  - Detailed locations: count_subj[23,13],count_by_subject_ordered[27,27]
+12629 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder  - Pig features in the vertex: GROUP_BY,SAMPLER
+12732 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder  - For vertex - scope-50: parallelism=1, memory=3072, java opts=-Djava.net.preferIPv4Stack=true -Dhadoop.metrics.log.level=WARN -Xmx2458m -Dlog4j.configuratorClass=org.apache.tez.common.TezLog4jConfigurator -Dlog4j.configuration=tez-container-log4j.properties -Dyarn.app.container.log.dir=<LOG_DIR> -Dtez.root.logger=INFO,CLA 
+12737 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder  - Processing aliases: 
+12737 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder  - Detailed locations: 
+12737 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder  - Pig features in the vertex: 
+12809 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder  - For vertex - scope-60: parallelism=-1, memory=3072, java opts=-Djava.net.preferIPv4Stack=true -Dhadoop.metrics.log.level=WARN -Xmx2458m -Dlog4j.configuratorClass=org.apache.tez.common.TezLog4jConfigurator -Dlog4j.configuration=tez-container-log4j.properties -Dyarn.app.container.log.dir=<LOG_DIR> -Dtez.root.logger=INFO,CLA 
+12810 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder  - Processing aliases: count_by_subject_ordered
+12814 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder  - Detailed locations: count_by_subject_ordered[27,27]
+12815 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder  - Pig features in the vertex: 
+12904 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder  - For vertex - scope-62: parallelism=50, memory=3072, java opts=-Djava.net.preferIPv4Stack=true -Dhadoop.metrics.log.level=WARN -Xmx2458m -Dlog4j.configuratorClass=org.apache.tez.common.TezLog4jConfigurator -Dlog4j.configuration=tez-container-log4j.properties -Dyarn.app.container.log.dir=<LOG_DIR> -Dtez.root.logger=INFO,CLA 
+12906 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder  - Processing aliases: 
+12906 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder  - Detailed locations: 
+12906 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder  - Pig features in the vertex: ORDER_BY
+12963 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJobCompiler  - Total estimated parallelism is 8157
+13070 [PigTezLauncher-0] INFO  org.apache.pig.tools.pigstats.tez.TezScriptState  - Pig script settings are added to the job
+20663 [PigTezLauncher-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - Submitting DAG PigLatin:problem4.pig-0_scope-0
+21449 [PigTezLauncher-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - Submitted DAG PigLatin:problem4.pig-0_scope-0. Application id: application_1586542497619_0003
+22059 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezLauncher  - HadoopJobId: job_1586542497619_0003
+22451 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 0 Running: 0 Failed: 0 Killed: 0, diagnostics=, counters=null
+42450 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 1 Running: 43 Failed: 0 Killed: 0, diagnostics=, counters=null
+62450 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 13 Running: 71 Failed: 0 Killed: 0, diagnostics=, counters=null
+82450 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 50 Running: 72 Failed: 0 Killed: 0, diagnostics=, counters=null
+102451 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 135 Running: 71 Failed: 0 Killed: 0, diagnostics=, counters=null
+122451 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 258 Running: 70 Failed: 0 Killed: 0, diagnostics=, counters=null
+142452 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 389 Running: 70 Failed: 0 Killed: 0, diagnostics=, counters=null
+162451 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 517 Running: 77 Failed: 0 Killed: 0 KilledTaskAttempts: 1, diagnostics=, counters=null
+182451 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 656 Running: 107 Failed: 0 Killed: 0 KilledTaskAttempts: 2, diagnostics=, counters=null
+202452 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 811 Running: 115 Failed: 0 Killed: 0 KilledTaskAttempts: 4, diagnostics=, counters=null
+222452 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 974 Running: 115 Failed: 0 Killed: 0 KilledTaskAttempts: 6, diagnostics=, counters=null
+242453 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 1175 Running: 121 Failed: 0 Killed: 0 KilledTaskAttempts: 7, diagnostics=, counters=null
+262453 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 1388 Running: 119 Failed: 0 Killed: 0 KilledTaskAttempts: 8, diagnostics=, counters=null
+282453 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 1618 Running: 112 Failed: 0 Killed: 0 KilledTaskAttempts: 10, diagnostics=, counters=null
+302453 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 1847 Running: 114 Failed: 0 Killed: 0 KilledTaskAttempts: 11, diagnostics=, counters=null
+322453 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 2079 Running: 117 Failed: 0 Killed: 0 KilledTaskAttempts: 12, diagnostics=, counters=null
+342453 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 2311 Running: 114 Failed: 0 Killed: 0 KilledTaskAttempts: 14, diagnostics=, counters=null
+362453 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 2533 Running: 114 Failed: 0 Killed: 0 KilledTaskAttempts: 15, diagnostics=, counters=null
+382454 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 2761 Running: 114 Failed: 0 Killed: 0 KilledTaskAttempts: 16, diagnostics=, counters=null
+402454 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 2980 Running: 114 Failed: 0 Killed: 0 KilledTaskAttempts: 18, diagnostics=, counters=null
+422454 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 3219 Running: 119 Failed: 0 Killed: 0 KilledTaskAttempts: 19, diagnostics=, counters=null
+442454 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 3443 Running: 121 Failed: 0 Killed: 0 KilledTaskAttempts: 20, diagnostics=, counters=null
+462454 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 3688 Running: 117 Failed: 0 Killed: 0 KilledTaskAttempts: 22, diagnostics=, counters=null
+482454 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 3928 Running: 117 Failed: 0 Killed: 0 KilledTaskAttempts: 23, diagnostics=, counters=null
+502454 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 4172 Running: 117 Failed: 0 Killed: 0 KilledTaskAttempts: 24, diagnostics=, counters=null
+522455 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 4411 Running: 114 Failed: 0 Killed: 0 KilledTaskAttempts: 26, diagnostics=, counters=null
+542454 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 4651 Running: 110 Failed: 0 Killed: 0 KilledTaskAttempts: 27, diagnostics=, counters=null
+562454 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 4887 Running: 106 Failed: 0 Killed: 0 KilledTaskAttempts: 27, diagnostics=, counters=null
+582454 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 5118 Running: 113 Failed: 0 Killed: 0 KilledTaskAttempts: 29, diagnostics=, counters=null
+602454 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 5359 Running: 115 Failed: 0 Killed: 0 KilledTaskAttempts: 30, diagnostics=, counters=null
+622454 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 5602 Running: 115 Failed: 0 Killed: 0 KilledTaskAttempts: 31, diagnostics=, counters=null
+642454 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 5829 Running: 120 Failed: 0 Killed: 0 KilledTaskAttempts: 33, diagnostics=, counters=null
+662454 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 6069 Running: 119 Failed: 0 Killed: 0 KilledTaskAttempts: 34, diagnostics=, counters=null
+682455 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 6306 Running: 110 Failed: 0 Killed: 0 KilledTaskAttempts: 35, diagnostics=, counters=null
+702455 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 6511 Running: 119 Failed: 0 Killed: 0 KilledTaskAttempts: 36, diagnostics=, counters=null
+722455 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 6746 Running: 119 Failed: 0 Killed: 0 KilledTaskAttempts: 38, diagnostics=, counters=null
+742455 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 6984 Running: 116 Failed: 0 Killed: 0 KilledTaskAttempts: 39, diagnostics=, counters=null
+762455 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 7213 Running: 116 Failed: 0 Killed: 0 KilledTaskAttempts: 41, diagnostics=, counters=null
+782456 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 7452 Running: 112 Failed: 0 Killed: 0 KilledTaskAttempts: 42, diagnostics=, counters=null
+802456 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8057 Succeeded: 7676 Running: 118 Failed: 0 Killed: 0 KilledTaskAttempts: 43, diagnostics=, counters=null
+822456 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8156 Succeeded: 7908 Running: 0 Failed: 0 Killed: 0 KilledTaskAttempts: 45, diagnostics=, counters=null
+842456 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8156 Succeeded: 7908 Running: 61 Failed: 0 Killed: 0 KilledTaskAttempts: 45, diagnostics=, counters=null
+862456 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8156 Succeeded: 7909 Running: 61 Failed: 0 Killed: 0 KilledTaskAttempts: 45, diagnostics=, counters=null
+882457 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8087 Succeeded: 7970 Running: 52 Failed: 0 Killed: 0 KilledTaskAttempts: 46, diagnostics=, counters=null
+902456 [Timer-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=RUNNING, progress=TotalTasks: 8087 Succeeded: 8006 Running: 16 Failed: 0 Killed: 0 KilledTaskAttempts: 48, diagnostics=, counters=null
+907462 [PigTezLauncher-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob  - DAG Status: status=SUCCEEDED, progress=TotalTasks: 8087 Succeeded: 8087 Running: 0 Failed: 0 Killed: 0 KilledTaskAttempts: 49, diagnostics=, counters=Counters: 67
+	org.apache.tez.common.counters.DAGCounter
+		NUM_KILLED_TASKS=49
+		NUM_SUCCEEDED_TASKS=8087
+		TOTAL_LAUNCHED_TASKS=8089
+		OTHER_LOCAL_TASKS=14
+		RACK_LOCAL_TASKS=7908
+		AM_CPU_MILLISECONDS=236640
+		AM_GC_TIME_MILLIS=4471
+	File System Counters
+		FILE_BYTES_READ=13614600216
+		FILE_BYTES_WRITTEN=18926982410
+		FILE_READ_OPS=0
+		FILE_LARGE_READ_OPS=0
+		FILE_WRITE_OPS=0
+		HDFS_BYTES_READ=0
+		HDFS_BYTES_WRITTEN=29467
+		HDFS_READ_OPS=150
+		HDFS_LARGE_READ_OPS=0
+		HDFS_WRITE_OPS=100
+		S3N_BYTES_READ=530603171733
+		S3N_BYTES_WRITTEN=0
+		S3N_READ_OPS=0
+		S3N_LARGE_READ_OPS=0
+		S3N_WRITE_OPS=0
+	org.apache.tez.common.counters.TaskCounter
+		NUM_SPECULATIONS=49
+		REDUCE_INPUT_GROUPS=117701944
+		REDUCE_INPUT_RECORDS=441982102
+		COMBINE_INPUT_RECORDS=0
+		SPILLED_RECORDS=894319001
+		NUM_SHUFFLED_INPUTS=801232
+		NUM_SKIPPED_INPUTS=110
+		NUM_FAILED_SHUFFLE_INPUTS=0
+		MERGED_MAP_OUTPUTS=93318714
+		GC_TIME_MILLIS=2644648
+		CPU_MILLISECONDS=46179590
+		PHYSICAL_MEMORY_BYTES=9686893461504
+		VIRTUAL_MEMORY_BYTES=25904164241408
+		COMMITTED_HEAP_BYTES=9686893461504
+		INPUT_RECORDS_PROCESSED=2501797026
+		INPUT_SPLIT_LENGTH_BYTES=530520369978
+		OUTPUT_RECORDS=2619498957
+		OUTPUT_LARGE_RECORDS=0
+		OUTPUT_BYTES=176322858683
+		OUTPUT_BYTES_WITH_OVERHEAD=32704848339
+		OUTPUT_BYTES_PHYSICAL=7024929597
+		ADDITIONAL_SPILLS_BYTES_WRITTEN=51610132
+		ADDITIONAL_SPILLS_BYTES_READ=12018966390
+		ADDITIONAL_SPILL_COUNT=0
+		SHUFFLE_CHUNK_COUNT=8036
+		SHUFFLE_BYTES=7024946215
+		SHUFFLE_BYTES_DECOMPRESSED=32705014765
+		SHUFFLE_BYTES_TO_MEM=6796177483
+		SHUFFLE_BYTES_TO_DISK=0
+		SHUFFLE_BYTES_DISK_DIRECT=228768732
+		NUM_MEM_TO_DISK_MERGES=0
+		NUM_DISK_TO_DISK_MERGES=277
+		SHUFFLE_PHASE_TIME=1261730
+		MERGE_PHASE_TIME=2144205
+		FIRST_EVENT_RECEIVED=27199
+		LAST_EVENT_RECEIVED=623525
+	MultiStoreCounters
+		Output records in _0_problem4-results=3982
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	org.apache.hadoop.mapreduce.TaskCounter
+		COMBINE_INPUT_RECORDS=2619485610
+		COMBINE_OUTPUT_RECORDS=441976720
+908215 [main] INFO  org.apache.pig.tools.pigstats.tez.TezPigScriptStats  - Script Statistics:
+
+       HadoopVersion: 2.8.5-amzn-5                                                                                        
+          PigVersion: 0.17.0                                                                                              
+          TezVersion: 0.9.2                                                                                               
+              UserId: hadoop                                                                                              
+            FileName: problem4.pig                                                                                        
+           StartedAt: 2020-04-10 18:48:28                                                                                 
+          FinishedAt: 2020-04-10 19:03:27                                                                                 
+            Features: GROUP_BY,ORDER_BY                                                                                   
+
+Success!
+
+
+DAG 0:
+                                    Name: PigLatin:problem4.pig-0_scope-0                                                                     
+                           ApplicationId: job_1586542497619_0003                                                                              
+                      TotalLaunchedTasks: 8089                                                                                                
+                           FileBytesRead: 13614600216                                                                                         
+                        FileBytesWritten: 18926982410                                                                                         
+                           HdfsBytesRead: 0                                                                                                   
+                        HdfsBytesWritten: 29467                                                                                               
+      SpillableMemoryManager spill count: 0                                                                                                   
+                Bags proactively spilled: 0                                                                                                   
+             Records proactively spilled: 0                                                                                                   
+
+DAG Plan:
+Tez vertex scope-39	->	Tez vertex scope-40,
+Tez vertex scope-40	->	Tez vertex scope-41,
+Tez vertex scope-41	->	Tez vertex scope-50,Tez vertex scope-60,
+Tez vertex scope-50	->	Tez vertex scope-60,
+Tez vertex scope-60	->	Tez vertex scope-62,
+Tez vertex scope-62
+
+Vertex Stats:
+VertexId Parallelism TotalTasks   InputRecords   ReduceInputRecords  OutputRecords  FileBytesRead FileBytesWritten  HdfsBytesRead HdfsBytesWritten Alias	Feature	Outputs
+scope-39        7908       7908     2501793030                    0     2501793030       38084928       7042858240              0                0 count_by_subject,ntriples,raw,subjects		
+scope-40         100        100              0            441897748      117692580    13574492228      11883807304              0                0 count_by_subject,count_subj,group_subj	GROUP_BY	
+scope-41          -1         14              0                78972           5382        1850549           207519              0                0 count_by_subject_ordered,count_subj	GROUP_BY,SAMPLER	
+scope-50           1          1              0                 1400              1          12788            14126              0                0 		
+scope-60          -1         14           3996                    0           3982          62954            67562              0                0 count_by_subject_ordered		
+scope-62          50         50              0                 3982           3982          96769            27659              0            29467 	ORDER_BY	/user/hadoop/problem4-results,
+
+Input(s):
+Successfully read 2501793030 records from: "s3n://uw-cse-344-oregon.aws.amazon.com/btc-2010-chunk-*"
+
+Output(s):
+Successfully stored 3982 records (29467 bytes) in: "/user/hadoop/problem4-results"
+
+908243 [main] INFO  org.apache.pig.Main  - Pig script completed in 15 minutes, 8 seconds and 428 milliseconds (908428 ms)
+908244 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezLauncher  - Shutting down thread pool
+908259 [pool-1-thread-1] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezSessionManager  - Shutting down Tez session org.apache.tez.client.TezClient@50c0c74d
